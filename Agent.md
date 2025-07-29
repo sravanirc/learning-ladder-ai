@@ -20,9 +20,9 @@ Many learners have the motivation to grow their skills but struggle to convert b
 Learning Ladder AI acts as an intelligent learning assistant that helps users:
 
 - Define their learning goal in natural language
-- Break the goal down into a 4-week structured plan
+- Break the goal down into a 4 to 6-week structured plan
 - Recommend resources for each milestone
-- Adapt plans over time (future functionality)
+- Adapt plans over time (future functionality)(Feedback loop)
 - Track progress and build consistent learning habits (future functionality)
 
 The agent is powered by a large language model and built using a no-code platform (Langflow), making it accessible, customizable, and scalable.
@@ -78,14 +78,8 @@ Your task is to:
 
 If the user does not specify an experience level, assume they are a beginner.
 
-Input example:
-Goal: Learn Python for data analysis  
-Duration: 6 weeks  
-Experience Level: Beginner
-
 Make the tone supportive and achievable. Tailor plans to beginners unless otherwise specified.
 
 User goal: {goal_description}  
 Duration: {duration}  
 Experience level: {experience_level}
-
