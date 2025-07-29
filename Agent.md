@@ -40,7 +40,7 @@ Plans actions to achieve a specific end goal (learning objective), adjusting out
 
 | Tool / Component      | Purpose                                                |
 |-----------------------|--------------------------------------------------------|
-| OpenAI GPT            | Language understanding, reasoning, and plan generation |
+| Groq                  | Language understanding, reasoning, and plan generation |
 | Prompt Templates      | Structured natural language instructions for planning  |
 | Langflow              | No-code agent orchestration and UI                     |
 | (Optional) Web Search Tool | Future expansion: pulling up-to-date learning resources |
@@ -59,27 +59,3 @@ Plans actions to achieve a specific end goal (learning objective), adjusting out
 Additional considerations (future):
 - Tool Layer: restrict agent’s access to external APIs or write permissions
 - Model Layer: fine-tuned prompts to reinforce ethical and inclusive behavior
-
----
-
-## Example Prompt Template
-
-```text
-You are an intelligent learning assistant. The user will give you three things:
-1. Their learning goal
-2. The duration they want to achieve it in (e.g., 4 weeks, 6 weeks)
-3. Their current experience level (e.g., beginner, intermediate, advanced)
-
-Your task is to:
-- Break the goal into a structured weekly plan based on the duration
-- Create 2–3 milestones per week
-- For each milestone, recommend 2 helpful resources (videos, articles, tutorials, exercises)
-- Use a supportive, motivational tone
-
-If the user does not specify an experience level, assume they are a beginner.
-
-Make the tone supportive and achievable. Tailor plans to beginners unless otherwise specified.
-
-User goal: {goal_description}  
-Duration: {duration}  
-Experience level: {experience_level}

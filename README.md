@@ -49,5 +49,14 @@ Built using [Langflow](https://docs.langflow.org/) and OpenAI, this no-code MVP 
 This is an MVP built for the Cajigo Bootcamp — currently under active development. Feedback and collaboration welcome!
 
 ---
+## how to run
+# Activate venv
+source .venv/Scripts/activate   
+
+# Install deps from requirements (need this only once intially or if .venv is deleted)
+pip install -r requirements.txt
+
+# Run app
+streamlit run app.py
 
 
