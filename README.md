@@ -1,14 +1,14 @@
 ---
-title: Streamlit Template Space
+title: Learning Ladder Ai
 emoji: 🚀
 colorFrom: red
 colorTo: red
 sdk: docker
 app_port: 8501
 tags:
-  - streamlit
+- streamlit
 pinned: false
-short_description: Streamlit template space
+short_description: Plan. Learn. Achieve. With AI by your side.
 ---
 
 # Welcome to Streamlit!
