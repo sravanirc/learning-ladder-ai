@@ -2,4 +2,6 @@
 # This file lists the packages required to run the Learning Ladder AI project.
 streamlit
 langflow
-python-dotenv
+python-dotenvaltair
+pandas
+streamlit
