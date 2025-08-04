@@ -13,7 +13,7 @@ FLOW_ID = os.environ["ASTRA_FLOW_ID"]
 TOKEN = os.environ["ASTRA_TOKEN"]
 API_URL = f"{API_BASE}/api/v1/run/{FLOW_ID}?stream=false"
 
-# Custom styles
+# Minimal custom styles
 st.markdown(
     """
     <style>
@@ -39,6 +39,13 @@ st.markdown(
         color: white;
     }
 
+    /* Simple scroll on mobile for tables */
+    .scrollable-table-container {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    /* Hide overview on small screens */
     @media (max-width: 768px) {
         .desktop-only {
             display: none !important;
@@ -67,7 +74,6 @@ st.markdown(
     """
     <p style="
         text-align: center;
-        width: full;
         margin: 0.2rem auto 1rem auto;
         color: #333333;
         font-size: 1rem;
@@ -134,16 +140,16 @@ if generate:
                 table_part = ""
                 plan_part = result
 
-            # Display Table (Desktop only)
+            # Display Table inside scrollable container and expander
             if table_part:
                 st.markdown("## Overview")
-                st.markdown(f"""
-                <div class="desktop-only">
-                {table_part}
-                </div>
-                """, unsafe_allow_html=True)
+                with st.expander("Show Summary Table"):
+                    st.markdown(
+                        f'<div class="scrollable-table-container">{table_part}</div>',
+                        unsafe_allow_html=True
+                    )
 
-            # Display Plan (All screens)
+            # Display Plan (all screens)
             st.markdown("## Weekly Plan")
             st.markdown(plan_part)
 
